@@ -43,7 +43,7 @@ a {
   margin-top: -10px;
   @include x-small {
     margin-bottom: 35px;
-}
+  }
 }
 
 #chart-area {
@@ -63,7 +63,7 @@ a {
 .highcharts-series-group {
   transform: translate(0.5px,0);
   & .highcharts-series {
-    & rect:nth-child(4), rect:nth-child(5) {
+    & rect:nth-child(4), rect:nth-child(3) {
       fill: $green-secondary-5;
     }
   }
