@@ -22,18 +22,29 @@ document.addEventListener('DOMContentLoaded', function () {
         title: {
             text: null
         },
+        data: {
+            googleSpreadsheetKey: '1YOKb5l2VM4aAB2r20N_1aT_1vEajYrP3U-U3A6lZbC0'
+        },
         legend: {
-            align: 'right',
-            symbolRadius: 0,
-            verticalAlign: 'top',
-            x: 10,
-            itemMarginTop: -10
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                clip: false,
+                groupPadding: .05
+            }
         },
         xAxis: {
-            categories: ['Apples', 'Bananas', 'Oranges']
+            labels: {
+                style: {
+                    whiteSpace: 'nowrap'
+                }
+            }
         },
         yAxis: {
             title: false,
+            max: 25,
+            tickAmount: 6,
             labels: {
                 useHTML: true,
                 overflow: 'allow'
@@ -44,7 +55,8 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         tooltip: {
             shadow: false,
-            padding: 10
+            padding: 10,
+            valueSuffix: "%"
         },
         responsive: {
             rules: [{
@@ -64,13 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
               }
             }]
-        },
-        series: [{
-            name: 'Jane',
-            data: [1, 6, 4]
-        }, {
-            name: 'John',
-            data: [5, 7, 3]
-        }]
+        }
     });
 });
